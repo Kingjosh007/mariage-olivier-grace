@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Paramètres</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.23.1/tagify.css" integrity="sha512-1CG2eaZ3B/p7OqthY2eBpVCD2A+0b2T7aEXfMnr4FqZFoKddxURdxcD8EcKI66qthtkGAWA/Hnwy7ceNHcHJKw==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin=" anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/c397284221.js" crossorigin="anonymous"></script>
+
+    <title>Paramètres</title>
+    <link rel="stylesheet" href="./css/settingsStyle.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <!-- This is the main navbar section -->
+    <nav>
+        <div class="nav-wrapper z-depth-5 themecolor1 darken-2">
+            <!-- this handles the sliding bars -->
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="fa fa-bars fa-2x"></i></a>
+            <ul id="slide-out" class="side-nav">
+                <li class="themecolor2"><a href="./guests.html"><i class="fas fa-person-booth"> </i> Invités </a> </li>
+                <li class="themecolor2"><a href="./tables.html"><i class="fas fa-tablets"></i> Tables</a></li>
+                <li class="themecolor2"><a href="./settings.html"><i class="fa fa-cog"></i> Paramètres</a></li>
+                <li class="themecolor2"><a href="#aboutUsModal" class="modal-trigger" data-target="#aboutUsModal"><i class="fa fa-question-circle-o"></i> À propos </a></li>
+            </ul>
+            <!-- this handles the full-width navbar -->
+
+            <div id="weddingHeadInfos">
+
+            </div>
+            <ul id="nav-mobile" class="right hide-on-med-and-down lighten-1 themecolor2">
+                <li class=""><a href="#"><i class="fa fa-list"> </i> Invités</a></li>
+                <li><a href="./tables.html"><i class="fas fa-tablets"></i> Tables</a></li>
+                <li><a href="./settings.html"><i class="fa fa-cog"></i> Paramètres </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- This is the main body<div> container section -->
+    <div class="container-fluid">
+
+        <div class="mx-auto">
+            <div class="card border-primary">
+                <div class="card-header themecolor2" id="usernameSpan">
+                    <h3 id="h3header" style="font-weight: bold;">Paramètres</h3>
+                </div>
+                <div class="card-body text-primary" id="settingsArea">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="groomsName" class="themecolor2-text">Prénom du marié</label>
+                                <input type="text" class="form-control" name="groomsName" id="inputGroomsName" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="maidsName" class="themecolor2-text">Prénom de la mariée</label>
+                                <input type="text" class="form-control" name="maidsName" id="inputMaidsName" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="weddingTheme" class="themecolor2-text">Thème du mariage</label>
+                            <input type="text" class="form-control" name="weddingTheme" id="inputAddress" placeholder="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="themeColor1" class="themecolor2-text">Couleur 1 du mariage</label>
+                            <input type="color" class="form-control" name="themeColor1" id="inputColor1" placeholder="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="themeColor2" class="themecolor2-text">Couleur 2 du mariage</label>
+                            <input type="color" class="form-control" name="themeColor2" id="inputColor2" placeholder="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="weddingDate" class="themecolor2-text">Date</label>
+                            <input type="date" class="form-control" name="weddingDate" id="inputDate" />
+                        </div>
+                        <div class="form-group">
+                            <label for="weddingVenue" class="themecolor2-text">Ville et lieu</label>
+                            <input type="text" class="form-control" name="weddingVenue" id="inputVenue" />
+                        </div>
+                        <div class="form-group">
+                            <label for="nbGuest" class="themecolor2-text">Nombre d'invités max.</label>
+                            <input type="number" name="nbGuest" min="1" max="50000" value="200" step="1" class="form-control" id="inputNbGuests" />
+                        </div>
+                        <div class="form-group">
+                            <label for="nbTables" class="themecolor2-text">Nombre de tables</label>
+                            <input type="number" name="nbTables" min="1" max="1000" value="50" step="1" class="form-control" id="inputNbTables" />
+                        </div>
+                        <div class="form-group">
+                            <label for="maxGuestsPerTable" class="themecolor2-text">Nb max d'invités par table</label>
+                            <input name="maxGuestsPerTable" type="number" min="2" max="100" value="10" step="1" class="form-control" id="inputNbMaxPerTable">
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button type="submit" class="btn btn-primary themecolor1" id="btnSaveModifs">
+                            Enregistrer les modifications
+                          </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="aboutUsModal" class="modal bottom-sheet">
+            <div class="modal-content">
+                <p class="h5">
+                    Application développée par King Josaphat Chewa pour la réception du mariage d'Olivier et Grâce Marquez (7 août 2022). <br><br><b>Contact:</b> (+237) 655 27 50 64
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin=" anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- partial -->
+
+    <script src="./js/notify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.23.1/tagify.min.js" integrity="sha512-jb/SYEPmc1tGaJ3Yu6CZaOBhn8sqTpgTqVcXUm4udHGaUsBIOj6DsIc6aXZpsvXhtexnmIowmOVBHKuIwyB2Rw==" crossorigin="anonymous"></script>
+
+    <script src="./js/global.js"></script>
+    <script src="./js/settingsScript.js"></script>
+</body>
+
+</html>
